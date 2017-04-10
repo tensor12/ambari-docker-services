@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<metainfo>
+    <schemaVersion>2.0</schemaVersion>
+    <services>
+        <service>
+            <name>DOCKER</name>
+            <displayName>Docker</displayName>
+            <comment>container</comment>
+            <version>1.8.2</version>
+            <components>
+               <component>
+                    <name>Docker-Hosts</name>
+                    <displayName>Docker Nodes</displayName>
+                    <category>SLAVE</category>
+                    <cardinality>1+</cardinality>
+                    <commandScript>
+                        <script>scripts/master.py</script>
+                        <scriptType>PYTHON</scriptType>
+                        <timeout>600</timeout>
+                    </commandScript>
+                </component>
+            </components>
+            <osSpecifics>
+                <osSpecific>
+                    <osFamily>redhat6</osFamily>
+                    <packages>
+                        <package>
+                            <name>docker-io</name>
+                        </package>
+                    </packages>
+                </osSpecific>
+                
+                <osSpecific>
+                    <osFamily>redhat7</osFamily>
+                    <packages>
+                        <package>
+                            <name>docker</name>
+                        </package>
+                    </packages>
+                </osSpecific>
+            </osSpecifics>
+
+            <configuration-dependencies>
+                  <config-type>docker-conf</config-type>
+            </configuration-dependencies>
+            <restartRequiredAfterChange>true</restartRequiredAfterChange>
+        </service>
+    </services>
+</metainfo>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<configuration>
+   <property>
+    <name>OPTIONS</name>
+    <value>'--selinux-enabled --log-driver=journald'</value>
+    <description></description>
+  </property>
+  <property>
+   <name>DOCKER_CERT_PATH</name>
+   <value>/etc/docker</value>
+   <description></description>
+ </property>
+</configuration>
