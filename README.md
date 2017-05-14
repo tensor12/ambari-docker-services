@@ -7,7 +7,7 @@
 VERSION=`hdp-select status hadoop-client | sed 's/hadoop-client - \([0-9]\.[0-9]\).*/\1/'`
 ```
 ```
-sudo git clone http://192.168.0.30/lihua/ambari-docker-service.git   /var/lib/ambari-server/resources/stacks/HDP/$VERSION/services/DOCKER
+sudo git clone https://github.com/mavennode/ambari-docker-services.git  /var/lib/ambari-server/resources/stacks/HDP/$VERSION/services/DOCKER
 ```
 
 * Restart Ambari
